@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro forte e futuro sustentável</title>
+    <style>
+        :root {
+            /* Paleta de Cores em tons de Verde e Azul */
+            --verde-profundo: #1b4332;
+            --verde-sustentavel: #2d6a4f;
+            --azul-tecnologico: #0077b6;
+            --azul-claro: #90e0ef;
+            --fundo-pagina: #f4f9f4;
+            --texto-principal: #1a1a1a;
+            --texto-suave: #4a5568;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--fundo-pagina);
+            color: var(--texto-principal);
+        }
+
+        /* Banner Principal com Degradê de Azul/Verde e Imagem de Fundo */
+        header {
+            background: linear-gradient(rgba(27, 67, 50, 0.7), rgba(0, 119, 182, 0.7)), 
+                        url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 6rem 1rem;
+        }
+
+        /* Tamanho do título em 17pt como solicitado anteriormente */
+        header h1 {
+            margin: 0;
+            font-size: 17pt; 
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 1rem auto 0 auto;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        /* Seção de Introdução */
+        .introducao {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .introducao h2 {
+            color: var(--verde-profundo);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .introducao p {
+            font-size: 1.1rem;
+            color: var(--texto-suave);
+        }
+
+        /* Seção de Dados Reais */
+        .secao-dados {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(45, 106, 79, 0.08);
+            margin-bottom: 4rem;
+            border-left: 5px solid var(--azul-tecnologico);
+        }
+
+        .secao-dados h2 {
+            color: var(--verde-profundo);
+            margin-top: 0;
+            font-size: 1.6rem;
+        }
+
+        .dado-item {
+            margin-bottom: 2rem;
+        }
+
+        .dado-info {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .barra-fundo {
+            background-color: #edf2f7;
+            border-radius: 6px;
+            height: 24px;
+            overflow: hidden;
+        }
+
+        .barra-progresso {
+            height: 100%;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+        }
+
+        /* Cores aplicadas nas barras de dados */
+        .cor-verde { background-color: var(--verde-sustentavel); }
+        .cor-azul { background-color: var(--azul-tecnologico); }
+        .cor-mista { background: linear-gradient(90deg, var(--verde-sustentavel), var(--azul-tecnologico)); }
+
+        /* Grid de Cards */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-bottom: 3px solid var(--azul-tecnologico);
+        }
+
+        .card-imagem {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-corpo {
+            padding: 1.5rem;
+        }
+
+        .card-corpo h3 {
+            color: var(--verde-sustentavel);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .card-corpo p {
+            color: var(--texto-suave);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--verde-profundo);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            margin-top: 5rem;
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            header p { font-size: 1.1rem; }
+            .secao-dados { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Agro forte e futuro sustentável</h1>
+        <p>A sinergia perfeita entre a produção tecnológica do campo e a responsabilidade com as próximas gerações.</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="introducao">
+            <h2>O Ponto de Encontro da Preservação e da Produtividade</h2>
+            <p>O agronegócio moderno não compete com o meio ambiente; ele depende dele. Descubra como a tecnologia e os dados comprovam a viabilidade de um ecossistema equilibrado entre a segurança alimentar global e a conservação florestal.</p>
+        </section>
+
+        <section class="secao-dados">
+            <h2>📊 O Cenário Prático em Números Reais</h2>
+            <p>Veja como o setor rural brasileiro combina sustentabilidade com alto rendimento:</p>
+            
+            <div class="dado-item">
+                <div class="dado-info">
+                    <span>Território Dedicado à Preservação dentro de Propriedades Rurais</span>
+                    <span>33.2%</span>
+                </div>
+                <div class="barra-fundo">
+                    <div class="barra-progresso cor-verde" style="width: 33.2%;">Área de Vegetação Nativa Protegida</div>
+                </div>
+            </div>
+
+            <div class="dado-item">
+                <div class="dado-info">
+                    <span>Crescimento do Uso de Bioinsumos (Defensivos Biológicos)</span>
+                    <span>+70%</span>
+                </div>
+                <div class="barra-fundo">
+                    <div class="barra-progresso cor-azul" style="width: 70%;">Adoção Tecnológica Recente</div>
+                </div>
+            </div>
+
+            <div class="dado-item">
+                <div class="dado-info">
+                    <span>Redução Potencial de Gases de Efeito Estufa com Manejo Integrado (ILPF)</span>
+                    <span>45%</span>
+                </div>
+                <div class="barra-fundo">
+                    <div class="barra-progresso cor-mista" style="width: 45%;">Emissões Evitadas</div>
+                </div>
+            </div>
+            
+            <p style="font-size: 0.85rem; color: var(--texto-suave); margin-top: 1.5rem; font-style: italic;">
+                Fontes Oficiais: Levantamentos e dados públicos disponibilizados pela Embrapa Territorial e pelo Censo Agropecuário do IBGE.
+            </p>
+        </section>
+
+        <div class="grid-cards">
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=500&q=80" alt="Trator inteligente guiado por tecnologia no campo" class="card-imagem">
+                <div class="card-corpo">
+                    <h3>🌾 Campo Tecnológico</h3>
+                    <p>O uso de sensores acoplados, drones e inteligência artificial permite o monitoramento cirúrgico de lavouras. O insumo e a água são aplicados apenas onde há necessidade real, otimizando os recursos naturais.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80" alt="Plantação integrada à área de árvores nativas" class="card-imagem">
+                <div class="card-corpo">
+                    <h3>🌳 Sustentabilidade Ativa</h3>
+                    <p>Modelos como a Integração Lavoura-Pecuária-Floresta (ILPF) recuperam pastagens degradadas, retêm nutrientes cruciais no solo e transformam as fazendas em grandes aliadas no sequestro de carbono.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=500&q=80" alt="Cidade com parques e prédios modernos" class="card-imagem">
+                <div class="card-corpo">
+                    <h3>🏙️ O Papel Urbano</h3>
+                    <p>As cidades movimentam a demanda econômica sustentável. Consumidores conscientes impulsionam o comércio verde e exigem rastreabilidade, fechando o ciclo da sinergia saudável entre quem produz e quem consome.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© Conexão Cidade & Campo. Hospedado publicamente no GitHub Pages.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">Apoie a produção limpa, inteligente e integrada.</p>
+    </footer>
+
+</body>
+</html>
